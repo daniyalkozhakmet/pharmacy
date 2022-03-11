@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^l@#t##zy6hlk+%@2=$ak38iront7=^m4$c6)4lx0q6q1nqqnx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','localhost','pharmafy.herokuapp.com']
 
@@ -177,6 +177,7 @@ STATICFILES_DIRS = [
 ]
 MEDIA_ROOT = BASE_DIR/'static/images'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

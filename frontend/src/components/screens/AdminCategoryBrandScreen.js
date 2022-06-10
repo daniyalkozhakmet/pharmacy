@@ -76,12 +76,12 @@ const AdminCategoryBrandScreen = ({history}) => {
           <Row className="py-3 gx-5">
             <Col md={4}>
               <div className="d-flex justify-content-between align-items-center">
-                <h2>Category</h2>
+                <h2>Категория</h2>
                 <Button
                   className="btn-sm"
                   onClick={() => setModalShow(true)}
                 >
-                  <i className="fa fa-plus" aria-hidden="true"></i> Add Category
+                  <i className="fa fa-plus" aria-hidden="true"></i> Категория қосу
                 </Button>
               </div>
               <ListGroup variant="flush">
@@ -104,18 +104,18 @@ const AdminCategoryBrandScreen = ({history}) => {
             </Col>
             <Col>
               <div className="d-flex justify-content-between align-items-center">
-                <h2>Brand</h2>
+                <h2>Бренд</h2>
                 <Button className="btn-sm"  onClick={() => setModalShow1(true)}>
-                  <i className="fa fa-plus" aria-hidden="true"></i> Add Brand
+                  <i className="fa fa-plus" aria-hidden="true"></i> Бренд қосу
                 </Button>
               </div>
               <Table striped borderless hover size="sm">
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Brand</th>
-                    <th>Foundation</th>
-                    <th>Country</th>
+                    <th>Өндіруші</th>
+                    <th>Құрылған мерзімі</th>
+                    <th>Ел</th>
                     <th></th>
                   </tr>
                 </thead>

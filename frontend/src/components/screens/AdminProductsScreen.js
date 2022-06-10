@@ -47,7 +47,7 @@ const AdminProductsScreen = ({ history }) => {
         <>
           <Row className="my-3 align-items-center">
             <Col>
-              <h1>Pharmacy Products</h1>
+              <h1>Дәріхана өнімдері</h1>
             </Col>
             <Col style={{ display: "flex", justifyContent: "flex-end" }}>
               <LinkContainer to="/admin/products/create">
@@ -55,8 +55,7 @@ const AdminProductsScreen = ({ history }) => {
                   className="block"
                   onClick={(e) => createProductHandler()}
                 >
-                  <i className="fa fa-plus" aria-hidden="true"></i> Create
-                  Product
+                  <i className="fa fa-plus" aria-hidden="true"></i> Өнім қосу
                 </Button>
               </LinkContainer>
             </Col>
@@ -67,12 +66,12 @@ const AdminProductsScreen = ({ history }) => {
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Brand</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                    <th>Count</th>
-                    <th>Expire</th>
+                    <th>Атауы</th>
+                    <th>Бренд</th>
+                    <th>Категория</th>
+                    <th>Баға</th>
+                    <th>Сан</th>
+                    <th>Жарамдылық мерзімі</th>
                     <th></th>
                   </tr>
                 </thead>

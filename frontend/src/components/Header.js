@@ -34,7 +34,7 @@ const Header = () => {
                   <Nav className="mr-auto my-2 my-lg-0" navbarScroll>
                     <LinkContainer to="/cart">
                       <Nav.Link>
-                        <i className="fas fa-shopping-cart"></i> Cart
+                        <i className="fas fa-shopping-cart"></i> Себет
                       </Nav.Link>
                     </LinkContainer>
                     {userInfo && userInfo.name ? (
@@ -50,47 +50,47 @@ const Header = () => {
                           to="/profile"
                           className="bg-light text-primary"
                         >
-                          <NavDropdown.Item>Profile</NavDropdown.Item>
+                          <NavDropdown.Item>Профиль</NavDropdown.Item>
                         </LinkContainer>
 
                         <NavDropdown.Item onClick={logoutHandler}>
-                          Log out
+                          Шығу
                         </NavDropdown.Item>
                       </NavDropdown>
                     ) : (
                       <LinkContainer to="/login">
                         <Nav.Link>
-                          <i className="fas fa-user"></i> Sign in
+                          <i className="fas fa-user"></i> Кіру
                         </Nav.Link>
                       </LinkContainer>
                     )}
                     {userInfo && userInfo.isAdmin && (
-                      <NavDropdown title="Admin" id="basic-nav-dropdown">
+                      <NavDropdown title="Админ" id="basic-nav-dropdown">
                         <LinkContainer
                           to="/admin"
                           className="bg-light text-primary"
                         >
-                          <NavDropdown.Item>Users</NavDropdown.Item>
+                          <NavDropdown.Item>Қолданушылар</NavDropdown.Item>
                         </LinkContainer>
 
                         <LinkContainer
                           to="/admin/products"
                           className="bg-light text-primary"
                         >
-                          <NavDropdown.Item>Products</NavDropdown.Item>
+                          <NavDropdown.Item>Өнімдер</NavDropdown.Item>
                         </LinkContainer>
                         <LinkContainer
                           to="/admin/category"
                           className="bg-light text-primary"
                         >
-                          <NavDropdown.Item>Category&Brand</NavDropdown.Item>
+                          <NavDropdown.Item>Категория&Бренд</NavDropdown.Item>
                         </LinkContainer>
 
                         <LinkContainer
                           to="/admin/orders"
                           className="bg-light text-primary"
                         >
-                          <NavDropdown.Item>Orders</NavDropdown.Item>
+                          <NavDropdown.Item>Тапсырыстар</NavDropdown.Item>
                         </LinkContainer>
                       </NavDropdown>
                     )}

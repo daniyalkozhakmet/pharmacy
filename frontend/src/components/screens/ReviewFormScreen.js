@@ -25,23 +25,23 @@ const ReviewFormScreen = ({ id }) => {
       {message!='' && <Message variant={'danger'}>{message}</Message>}
       <Form onSubmit={submitHandler}>
         <Form.Group>
-          <Form.Label>Rating</Form.Label>
+          <Form.Label>Бағалау</Form.Label>
           <Form.Control
             as="select"
             value={rating}
             required
             onChange={(e) => setRating(e.target.value)}
           >
-            <option>* Select Rating Below</option>
-            <option value={1}>1(Poor)</option>
-            <option value={2}>2(Bad)</option>
-            <option value={3}>3(Average)</option>
-            <option value={4}>4(Good)</option>
-            <option value={5}>5(Excellent)</option>
+            <option>* Бағаны таңдаңыз</option>
+            <option value={1}>1(Нашар)</option>
+            <option value={2}>2(Қанатағаттанарлықсыз)</option>
+            <option value={3}>3(Қанатағаттанарлық)</option>
+            <option value={4}>4(Жақсы)</option>
+            <option value={5}>5(Өте жақсы)</option>
           </Form.Control>
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Comment</Form.Label>
+          <Form.Label>Пікір</Form.Label>
           <Form.Control
             as="textarea"
             value={comment}
@@ -49,7 +49,7 @@ const ReviewFormScreen = ({ id }) => {
             rows={3}
           />
         </Form.Group>
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Жіберу</Button>
       </Form>
     </div>
   );

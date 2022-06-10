@@ -25,7 +25,7 @@ const Product = ({ product }) => {
           </Link>
           <Card.Text as="div">
             <p style={{ marginBottom: "5px" }}>
-              Company : {product.brand.name} Category : {product.category.name}
+              Компания : {product.brand.name} Категория : {product.category.name}
             </p>
           </Card.Text>
           <Card.Text as="div">

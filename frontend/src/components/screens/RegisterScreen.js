@@ -44,14 +44,14 @@ useEffect(()=>{
 },[history,userInfo,redirect])
 return (
         <FormContainer>
-            <h1>Sign Up</h1>
+            <h1>Тіркелу</h1>
             {loading && <Loader/>}
             {msg &&  <Message variant='danger'>{msg}</Message>}
             {error && <Message variant='danger'>{error}</Message>}
             <Form onSubmit={onSubmitHandler}>
 
   <Form.Group className="mb-3" controlId="formBasicName">
-    <Form.Label>Name</Form.Label>
+    <Form.Label>Есім</Form.Label>
     <Form.Control type="text" name='name' required placeholder="Enter name" value={name} onChange={e=>onChange(e)} />
   </Form.Group>
 
@@ -61,17 +61,17 @@ return (
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
+    <Form.Label>Пароль</Form.Label>
     <Form.Control type="password"  name='password' required placeholder="Password" value={password} onChange={e=>onChange(e)}/>
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicPassword2">
-    <Form.Label>Confirm Password</Form.Label>
+    <Form.Label>Парольді қайталау</Form.Label>
     <Form.Control type="password" name='password2' required placeholder="Confirm Password" value={password2} onChange={e=>onChange(e)} />
 </Form.Group>
   <Button variant="primary" type="submit"  className='mx-1'>
-    Sign up
+    Тіркелу
   </Button>
-  Already have an Account? <Link to='/login'>Login</Link>
+  Аккаунтыныз бар ма ? <Link to='/login'>Кіру</Link>
 </Form>
         </FormContainer>
     )

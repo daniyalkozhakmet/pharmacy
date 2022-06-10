@@ -38,7 +38,7 @@ const onSubmitHandler=async(e)=>{
 }
 return (
         <FormContainer>
-            <h1>Sign In</h1>
+            <h1>Кіру</h1>
             {loading && <Loader/>}
             {error && <Message variant='danger'>{error}</Message>}
             <Form onSubmit={onSubmitHandler}>
@@ -48,13 +48,13 @@ return (
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
+    <Form.Label>Пароль</Form.Label>
     <Form.Control type="password"  name='password' required placeholder="Password" value={password} onChange={e=>onChange(e)}/>
   </Form.Group>
   <Button variant="primary" type="submit" className='mx-1'>
-    Sign in
+    Кіру
   </Button>
-  Don't have an Account? <Link to='/register'>Register</Link>
+  Аккаунтыныз жоқ па ?<Link to='/register'>Тіркелу</Link>
 </Form>
         </FormContainer>
     )

@@ -164,7 +164,7 @@ const AdminCreateScreen = ({ location, match, history }) => {
   };
   return (
     <FormContainer>
-      <h1>Create Product</h1>
+      <h1>Өнім енгізу</h1>
       {loadingCategory ? (
         <Loader />
       ) : loadingBrand ? (
@@ -176,7 +176,7 @@ const AdminCreateScreen = ({ location, match, history }) => {
       ) : (
         <Form onSubmit={onSubmitHandler}>
           <Form.Group className="mb-3" controlId="formBasicName">
-            <Form.Label>Name</Form.Label>
+            <Form.Label>Атауы</Form.Label>
             <Form.Control
               type="text"
               name="name"
@@ -188,14 +188,14 @@ const AdminCreateScreen = ({ location, match, history }) => {
           </Form.Group>
 
           <Form.Group>
-            <Form.Label>Brand</Form.Label>
+            <Form.Label>Бренд</Form.Label>
             <Form.Control
               as="select"
               defaultValue={brand}
               required
               onChange={(e) => setBrand(e.target.value)}
             >
-              <option>* Select Brand Below</option>
+              <option>* Брендті таңдаңыз</option>
               {brandGet &&
                 brandGet.map((brand) => (
                   <option key={brand._id} value={brand._id}>
@@ -205,7 +205,7 @@ const AdminCreateScreen = ({ location, match, history }) => {
             </Form.Control>
           </Form.Group>
           <Form.Group>
-            <Form.Label>Expire Date</Form.Label>
+            <Form.Label>Жарамдылық мерзімі</Form.Label>
             <DatePicker
               selected={startDate}
               defaultValue={startDate}
@@ -213,14 +213,14 @@ const AdminCreateScreen = ({ location, match, history }) => {
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label>Category</Form.Label>
+            <Form.Label>Категория</Form.Label>
             <Form.Control
               as="select"
               defaultValue={category}
               required
               onChange={(e) => setCategory(e.target.value)}
             >
-              <option>* Select Category Below</option>
+              <option>* Категория таңдаңыз</option>
               {categoryGet &&
                 categoryGet.map((category) => (
                   <option key={category._id} value={category._id}>
@@ -231,7 +231,7 @@ const AdminCreateScreen = ({ location, match, history }) => {
           </Form.Group>
           {editId && (
             <Form.Group className="mb-3" controlId="formBasicName">
-              <Form.Label>Image</Form.Label>
+              <Form.Label>Сурет</Form.Label>
 
               <Form.File
                 id="image-file"
@@ -245,7 +245,7 @@ const AdminCreateScreen = ({ location, match, history }) => {
           )}
 
           <Form.Group className="mb-3" controlId="formBasicName">
-            <Form.Label>Price</Form.Label>
+            <Form.Label>Баға</Form.Label>
             <Form.Control
               type="text"
               name="name"
@@ -257,7 +257,7 @@ const AdminCreateScreen = ({ location, match, history }) => {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicName">
-            <Form.Label>Count</Form.Label>
+            <Form.Label>Саны</Form.Label>
             <Form.Control
               type="text"
               name="name"
@@ -268,7 +268,7 @@ const AdminCreateScreen = ({ location, match, history }) => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Description</Form.Label>
+            <Form.Label>Сипаттама</Form.Label>
             <Form.Control
               placeholder="Write Description"
               onChange={(e) => setDescription(e.target.value)}
@@ -278,7 +278,7 @@ const AdminCreateScreen = ({ location, match, history }) => {
             />
           </Form.Group>
           <Button variant="primary" type="submit" className="mx-1">
-            Save
+            Сақтау
           </Button>
         </Form>
       )}

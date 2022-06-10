@@ -48,22 +48,22 @@ export const ModelAddBrand = (props) => {
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">Add Brand</Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">Бренд қосу</Modal.Title>
       </Modal.Header>
       <Modal.Body className="show-grid">
         <Container>
           <Form onSubmit={submitHandler}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Brand</Form.Label>
+              <Form.Label>Бренд</Form.Label>
               <Form.Control
                 type="text"
                 value={brand}
                 onChange={(e) => setBrand(e.target.value)}
-                placeholder="Enter Brand Name..."
+                placeholder="Бренд атауы"
               />
             </Form.Group>
             <Form.Group>
-              <Form.Label>Show the foundation of Brand</Form.Label>
+              <Form.Label>Бренд кұрылған уақыт</Form.Label>
               <DatePicker
                 selected={startDate}
                 value={startDate}
@@ -71,24 +71,24 @@ export const ModelAddBrand = (props) => {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Country</Form.Label>
+              <Form.Label>Ел</Form.Label>
               <Form.Control
                 type="text"
                 value={country}
                 onChange={(e) => setCountry(e.target.value)}
-                placeholder="Enter Brand Country..."
+                placeholder="Ел"
               />
             </Form.Group>
             <Form.Group
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Label>Description</Form.Label>
+              <Form.Label>Сипаттама</Form.Label>
               <Form.Control
                 as="textarea"
                 value={description}
                 rows={3}
-                placeholder="Enter Brand Description..."
+                placeholder="Бренд сипаттамасы"
                 onChange={(e) => setDescription(e.target.value)}
               />
             </Form.Group>
@@ -96,7 +96,7 @@ export const ModelAddBrand = (props) => {
         </Container>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={(e) => addBrandHandler(e)}>Add</Button>
+        <Button onClick={(e) => addBrandHandler(e)}>Қосу</Button>
       </Modal.Footer>
     </Modal>
   );

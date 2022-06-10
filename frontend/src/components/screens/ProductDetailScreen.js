@@ -39,7 +39,7 @@ const ProductDetailScreen = ({ match, history, location }) => {
       ) : (
         <>
           <Link to={`/${redirect}`} className="btn btn-primary my-3">
-            Go Back
+            Артқа
           </Link>
           <Row>
             <Col md={5}>
@@ -64,16 +64,16 @@ const ProductDetailScreen = ({ match, history, location }) => {
                 </ListGroup.Item>
 
                 <ListGroup.Item>
-                  Category:{" "}
+                  Категория:{" "}
                   {product && product.category && product.category.name}
                 </ListGroup.Item>
 
                 <ListGroup.Item>
-                  Brand: {product && product.brand && product.brand.name}
+                  Бренд: {product && product.brand && product.brand.name}
                 </ListGroup.Item>
 
                 <ListGroup.Item>
-                  Price: ${product && product.price}
+                  Құны: ${product && product.price}
                 </ListGroup.Item>
               </ListGroup>
             </Col>
@@ -82,7 +82,7 @@ const ProductDetailScreen = ({ match, history, location }) => {
               <ListGroup>
                 <ListGroup.Item>
                   <Row>
-                    <Col>Price</Col>
+                    <Col>Құны</Col>
                     <Col>
                       <strong>${product && product.price}</strong>
                     </Col>
@@ -90,18 +90,18 @@ const ProductDetailScreen = ({ match, history, location }) => {
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
-                    <Col>Status</Col>
+                    <Col>Статус</Col>
                     <Col>
                       {product && product.countInStock > 0
-                        ? "In Stock"
-                        : "Out of Stock"}
+                        ? "Дәріханада бар"
+                        : "Дәріханада жоқ"}
                     </Col>
                   </Row>
                 </ListGroup.Item>
                 {product && product.countInStock > 0 && (
                   <ListGroup.Item>
                     <Row>
-                      <Col>Qty: </Col>
+                      <Col>Саны: </Col>
                       <Col>
                         <Form.Control
                           as="select"
@@ -128,7 +128,7 @@ const ProductDetailScreen = ({ match, history, location }) => {
                       disabled={product && product.countInStock === 0}
                       type="button"
                     >
-                      Add to Cart
+                      Себетке қосу
                     </Button>
                   </Row>
                 </ListGroup.Item>
@@ -138,13 +138,13 @@ const ProductDetailScreen = ({ match, history, location }) => {
           <Row>
             <Row>
               <Col md={4}>
-              <h3>Brand: {product && product.brand &&product.brand.name}</h3>
-              <p>Company created in {product && product.brand &&<Moment format="YYYY-MM-DD">{product.brand.foundation}</Moment>}</p>
-              <h5>Description</h5>
+              <h3>Өндіруші: {product && product.brand &&product.brand.name}</h3>
+              <p>Өндіруші құрылды {product && product.brand &&<Moment format="YYYY-MM-DD">{product.brand.foundation}</Moment>}</p>
+              <h5>Сипаттама</h5>
               <p>{product && product.brand &&product.brand.description}</p>
               </Col>
               <Col>
-                <h3>Description</h3>
+                <h3>Сипаттама</h3>
                 <p>{product && product.description}</p>
               </Col>
             </Row>

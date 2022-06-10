@@ -22,7 +22,7 @@ const SearchBox = () => {
         onChange={(e) => setKeyword(e.target.value)}
       ></Form.Control>
       <Button type="submit" variant="outline-success" className="p-2 mx-1">
-        Search
+        Іздеу
       </Button>
     </Form>
   );

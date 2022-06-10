@@ -56,7 +56,7 @@ const ProfileScreen = ({ location, match, history }) => {
     if(window.confirm('Do you want to delete thsi order?')){
       dispatch(deleteOrderById(id))
     }
-    console.log(id)
+  
   }
   useEffect(() => {
     if (isEmpty(userInfo)) {
@@ -83,13 +83,13 @@ const ProfileScreen = ({ location, match, history }) => {
     <Container>
       <Row>
         <Col md={3}>
-          <h2>User Profile</h2>
+          <h2>Қолданушы профилі</h2>
           {loading && <Loader />}
           {msg && <Message variant="danger">{msg}</Message>}
           {error && <Message variant="danger">{error}</Message>}
           <Form onSubmit={onSubmitHandler}>
             <Form.Group className="mb-3" controlId="formBasicName">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>Есімі</Form.Label>
               <Form.Control
                 type="text"
                 name="name"
@@ -113,7 +113,7 @@ const ProfileScreen = ({ location, match, history }) => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Пароль</Form.Label>
               <Form.Control
                 type="password"
                 name="password"
@@ -123,7 +123,7 @@ const ProfileScreen = ({ location, match, history }) => {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword2">
-              <Form.Label>Confirm Password</Form.Label>
+              <Form.Label>Парольді қайталау</Form.Label>
               <Form.Control
                 type="password"
                 name="password2"
@@ -133,12 +133,12 @@ const ProfileScreen = ({ location, match, history }) => {
               />
             </Form.Group>
             <Button variant="primary" type="submit" className="mx-1">
-              Update
+              Жаңарту
             </Button>
           </Form>
         </Col>
         <Col md={9}>
-          <h2>Orders</h2>
+          <h2>Тапсырыстар</h2>
           {loadingMyOrder ? (
             <Loader />
           ) : errorMyOrder ? (
@@ -148,10 +148,10 @@ const ProfileScreen = ({ location, match, history }) => {
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Payment Method</th>
-                  <th>Total Price</th>
-                  <th>Delivered</th>
-                  <th>Paid</th>
+                  <th>Төлем түрі</th>
+                  <th>Толық құны</th>
+                  <th>Жеткізу</th>
+                  <th>Толем</th>
                   <th></th>
                 </tr>
               </thead>
@@ -187,7 +187,7 @@ const ProfileScreen = ({ location, match, history }) => {
                     <td>
                       <LinkContainer to={`order/${order._id}`}>
                         <Button className="btn btn-info btn-sm">
-                          View Order
+                          Тапсырысты көру
                         </Button>
                       </LinkContainer>
                       {!order.isPaid && <i className="fa fa-trash px-3" aria-hidden="true" onClick={e=>orderDeleteHandler(order._id)}></i> }

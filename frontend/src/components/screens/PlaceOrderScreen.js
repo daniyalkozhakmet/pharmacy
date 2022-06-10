@@ -57,13 +57,13 @@ const PlaceOrderScreen = ({ history }) => {
       <CheckoutSteps step1 step2 step3 step4 />
       <Row className="py-3">
         <Col md={8}>
-          <h2>Place Order</h2>
+          <h2>Тапсырыс орналастыру</h2>
           <ListGroup variant="flush">
             <ListGroup.Item>
               <Row>
                 <Col>
                   <p>
-                    <strong>Shipping Address: </strong>
+                    <strong>Жеткізу мәліметі: </strong>
                     {shippingAddress.address}
                     {"  "}
                     {shippingAddress.city}
@@ -76,12 +76,12 @@ const PlaceOrderScreen = ({ history }) => {
               </Row>
             </ListGroup.Item>
           </ListGroup>
-          <h3> Cart Items</h3>
+          <h3> Себет</h3>
           <ListGroup variant="flush">
             {cartItems.length == 0 ? (
               <Message variant="info">
-                Cart is Empty!{" "}
-                <LinkContainer to="/">Go Back Shopping</LinkContainer>
+                Себет бос!{" "}
+                <LinkContainer to="/">Өнімдерге өту</LinkContainer>
               </Message>
             ) : (
               cartItems.map((item) => (
@@ -102,8 +102,8 @@ const PlaceOrderScreen = ({ history }) => {
                       </LinkContainer>
                     </Col>
                     <Col md={4}>
-                      {item.qty} x ${item.price} = $
-                      {(item.price * item.qty).toFixed(2)}
+                      {item.qty} x {item.price} тг = 
+                      {(item.price * item.qty).toFixed(2)} тг
                     </Col>
                   </Row>
                 </ListGroup.Item>
@@ -112,30 +112,30 @@ const PlaceOrderScreen = ({ history }) => {
           </ListGroup>
         </Col>
         <Col md={4}>
-          <h2>Summary</h2>
+          <h2>Қорытынды</h2>
           <Card>
             <ListGroup variant="flush">
               <ListGroup.Item>
                 <Row>
-                  <Col>Total Count:</Col>
+                  <Col>Саны:</Col>
                   <Col>{cart.countTotal}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Total Price:</Col>
-                  <Col>${cart.priceTotal.toFixed(2)}</Col>
+                  <Col>Құны:</Col>
+                  <Col>{cart.priceTotal.toFixed(2)} тг</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Shipping Price:</Col>
-                  <Col>${cart.shippingPrice}</Col>
+                  <Col>Жеткізу құны:</Col>
+                  <Col>{cart.shippingPrice} тг</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Payment Method:</Col>
+                  <Col>Төлем түрі:</Col>
                   <Col>{paymentMethod}</Col>
                 </Row>
               </ListGroup.Item>
@@ -150,7 +150,7 @@ const PlaceOrderScreen = ({ history }) => {
               <ListGroup.Item>
                 <Row>
                   <Button className="btn-block" onClick={onClick}>
-                    Place Order
+                    Тапсырыс орналастыру
                   </Button>
                 </Row>
               </ListGroup.Item>

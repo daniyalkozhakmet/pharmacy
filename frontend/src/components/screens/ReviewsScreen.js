@@ -10,7 +10,7 @@ const ReviewsScreen = ({ review }) => {
       
         {review && review.length !== 0 &&
         <ListGroup variant="flush">
-        <h3>Reviews</h3>
+        <h3>Бағалау</h3>
           {review.map((review) => 
             <ListGroup.Item key={review._id}>
                 <p style={{padding:'0',margin:'0'}}>{review.name}</p>

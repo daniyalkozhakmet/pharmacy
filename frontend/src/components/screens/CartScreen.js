@@ -30,8 +30,8 @@ dispatch(addCart(id,qty))
         <div>
             <Row>
             <Col md={8}>
-            <h1>Cart Products</h1>
-            {cartItems.length==0 ? <Message variant='info'>Cart is Empty <Link to='/'>Go Shopping</Link></Message>:
+            <h1>Себеттегі өнімдер</h1>
+            {cartItems.length==0 ? <Message variant='info'>Себет бос <Link to='/'>Өнімдерге оралу</Link></Message>:
 <div>
 
 
@@ -76,12 +76,12 @@ dispatch(addCart(id,qty))
                 <Card>
                     <ListGroup variant='flush'>
                         <ListGroup.Item>
-                            <h2>Subtotal ({cartItems.reduce((acc,item)=>acc+Number(item.qty),0)}) items</h2>
+                            <h2>Барлығы ({cartItems.reduce((acc,item)=>acc+Number(item.qty),0)}) өнім</h2>
                             $ {cartItems.reduce((acc,item)=>acc+item.qty*item.price,0).toFixed(2)}
                         </ListGroup.Item>
                         <ListGroup.Item>
                             <Row>
-                            <Button type='button' className='btn btn-block' onClick={checkoutHandler} disabled={cartItems.length==0}>Proceed To Checkout</Button>
+                            <Button type='button' className='btn btn-block' onClick={checkoutHandler} disabled={cartItems.length==0}>Тексеріске өту</Button>
                             </Row>
                         </ListGroup.Item>
                     </ListGroup>

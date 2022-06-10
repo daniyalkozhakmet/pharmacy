@@ -81,14 +81,14 @@ const OrderScreen = ({ match }) => {
     <Container>
       <Row className="py-3">
         <Col md={8}>
-          <h1>Order {order._id}</h1>
-          <h3>Shipping: </h3>
+          <h1>Тапсырыс {order._id}</h1>
+          <h3>Жеткізу мәліметі: </h3>
           <ListGroup variant="flush">
             <ListGroup.Item>
               <Row>
                 <Col>
                   <p>
-                    <strong>Name: </strong>
+                    <strong>Есім: </strong>
                     {order.user.name}
                   </p>
                   <p>
@@ -96,7 +96,7 @@ const OrderScreen = ({ match }) => {
                     {order.user.email}
                   </p>
                   <p>
-                    <strong>Shipping Address: </strong>
+                    <strong>Жеткізу мәліметі: </strong>
                     {order.shippingAddress.address}
                     {"  "}
                     {order.shippingAddress.city}
@@ -108,17 +108,17 @@ const OrderScreen = ({ match }) => {
 
                   {order.isDelivered ? (
                     <Message variant="success">
-                      Delivered at{" "}
+                      Жеткізілді{" "}
                       <Moment format="YYYY/MM/DD">{order.deliveredAt}</Moment>
                     </Message>
                   ) : (
-                    <Message variant="warning">Not Delivered</Message>
+                    <Message variant="warning">Жеткізілмеді</Message>
                   )}
                 </Col>
               </Row>
             </ListGroup.Item>
           </ListGroup>
-          <h3>Payment Method</h3>
+          <h3>Төлем түрі</h3>
           <ListGroup variant="flush">
             <ListGroup.Item>
               <Row>
@@ -126,22 +126,22 @@ const OrderScreen = ({ match }) => {
                   <p>{order.paymentMethod}</p>{" "}
                   {order.isPaid ? (
                     <Message variant="success">
-                      Paid at{" "}
+                      Төленді{" "}
                       <Moment format="YYYY/MM/DD">{order.paidAt}</Moment>
                     </Message>
                   ) : (
-                    <Message variant="warning">Not Paid</Message>
+                    <Message variant="warning">Төленбеді</Message>
                   )}
                 </Col>
               </Row>
             </ListGroup.Item>
           </ListGroup>
-          <h3> Order Items</h3>
+          <h3> Тапсырыстар</h3>
           <ListGroup variant="flush">
             {order.orderItem.length == 0 ? (
               <Message variant="info">
-                Order is Empty!{" "}
-                <LinkContainer to="/">Go Back Shopping</LinkContainer>
+                Тапсырыс бос!{" "}
+                <LinkContainer to="/">Өнімдерге өту</LinkContainer>
               </Message>
             ) : (
               order.orderItem.map((item) => (
@@ -162,7 +162,7 @@ const OrderScreen = ({ match }) => {
                     </LinkContainer>
 
                     <Col md={4}>
-                      {item.qty} x ${item.price} = ${item.price * item.qty}
+                      {item.qty} x {item.price}тг = {item.price * item.qty}тг
                     </Col>
                   </Row>
                 </ListGroup.Item>
@@ -171,30 +171,30 @@ const OrderScreen = ({ match }) => {
           </ListGroup>
         </Col>
         <Col md={4}>
-          <h2>Summary</h2>
+          <h2>Қорытынды</h2>
           <Card>
             <ListGroup variant="flush">
               <ListGroup.Item>
                 <Row>
-                  <Col>Total Count:</Col>
+                  <Col>Саны:</Col>
                   <Col>{order.countTotal}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Total Price:</Col>
-                  <Col>${order.totalPrice}</Col>
+                  <Col>Құны:</Col>
+                  <Col>{order.totalPrice} тг</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Shipping Price:</Col>
-                  <Col>${order.shippingPrice}</Col>
+                  <Col>Жеткізу құны:</Col>
+                  <Col>{order.shippingPrice} тг</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Payment Method:</Col>
+                  <Col>Төлем түрі:</Col>
                   <Col>{order.paymentMethod}</Col>
                 </Row>
               </ListGroup.Item>
@@ -215,7 +215,7 @@ const OrderScreen = ({ match }) => {
                 <ListGroup.Item>
                   <Row>
                     <Button onClick={(e) => markAsDeliveredHandler(orderId)}>
-                      Mark as delivered
+                      Жеткізілді
                     </Button>
                   </Row>
                 </ListGroup.Item>

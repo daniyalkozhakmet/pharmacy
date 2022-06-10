@@ -27,7 +27,7 @@ const AdminOrders = ({ history }) => {
   }, [userInfo, isAdmin, dispatch]);
   return (
     <div>
-      <h1>Orders</h1>
+      <h1>Тапсырыстар</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -37,10 +37,10 @@ const AdminOrders = ({ history }) => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>User</th>
-              <th>Date</th>
-              <th>Paid</th>
-              <th>Delivered</th>
+              <th>Қолданушы</th>
+              <th>Толем уакыты</th>
+              <th>Толем</th>
+              <th>Жеткізу</th>
               <th></th>
             </tr>
           </thead>
@@ -53,9 +53,9 @@ const AdminOrders = ({ history }) => {
                   {" "}
                   <Moment format="YYYY-MM-DD">{order.paidAt}</Moment>
                 </td>
-                <td>${order.totalPrice}</td>
+                <td>{order.totalPrice} тг</td>
                 <td>{order.isDelivered ? <Moment format="YYYY-MM-DD">{order.deliveredAt}</Moment>:<i className="fas fa-times"  style={{color:'red'}}></i>}</td>
-              <td><LinkContainer to={`/order/${order._id}`}><Button className="btn-sm">Details</Button></LinkContainer></td>
+              <td><LinkContainer to={`/order/${order._id}`}><Button className="btn-sm">Толығырақ</Button></LinkContainer></td>
               </tr>
             ))}
           </tbody>

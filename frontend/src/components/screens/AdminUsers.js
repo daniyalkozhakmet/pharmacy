@@ -28,7 +28,7 @@ const AdminUsers = ({ history }) => {
   };
   return (
     <>
-      <h1>Pharmacy Users</h1>
+      <h1>Дәріхана қолданушылар</h1>
       {loading ? (
         <Loader />
       ) : error ? <Message variant='danger'>{error}</Message> : (
@@ -36,10 +36,10 @@ const AdminUsers = ({ history }) => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Username</th>
-              <th>Name</th>
+              <th>Қолданушы аты</th>
+              <th>Аты-жөні</th>
               <th>Email</th>
-              <th>Admin</th>
+              <th>Админ</th>
               <th></th>
             </tr>
           </thead>

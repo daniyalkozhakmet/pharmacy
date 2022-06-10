@@ -19,21 +19,21 @@ export const ModelAddCategory = (props) => {
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Add Category
+          Категория қосу
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="show-grid">
         <Container>
           <Form onSubmit={submitHandler}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Category</Form.Label>
-              <Form.Control type="text" value={category} onChange={e=>setCategory(e.target.value)} placeholder="Enter category" />
+              <Form.Label>Категория</Form.Label>
+              <Form.Control type="text" value={category} onChange={e=>setCategory(e.target.value)} placeholder="Категория енгізіңіз" />
             </Form.Group>
           </Form>
         </Container>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={e=>addCategoryHandler(e)}>Add</Button>
+        <Button onClick={e=>addCategoryHandler(e)}>Қосу</Button>
       </Modal.Footer>
     </Modal>
   );

@@ -22,7 +22,7 @@ const PaymentMethodScreen = ({history}) => {
       <>
       <CheckoutSteps step1 step2 step3/>
     <FormContainer>
-      <h1>Payment Method</h1>
+      <h1>Төлем түрі</h1>
       <Form onSubmit={submitHandler}>
         <Form.Check
           label={"PayPal"}
@@ -32,7 +32,7 @@ const PaymentMethodScreen = ({history}) => {
           
         />
 
-        <Button type="submit">Continue</Button>
+        <Button type="submit">Жалғыстыру</Button>
       </Form>
     </FormContainer>
     </>

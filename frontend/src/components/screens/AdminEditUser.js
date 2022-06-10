@@ -49,7 +49,7 @@ const AdminEditUser = ({ match, history }) => {
   };
   return (
     <FormContainer>
-      <h1>Edit User</h1>
+      <h1>Қолданушыны өзгерту</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -57,7 +57,7 @@ const AdminEditUser = ({ match, history }) => {
       ) : (
         <Form onSubmit={onSubmit}>
           <Form.Group className="mb-3" controlId="formBasicName">
-            <Form.Label>Name</Form.Label>
+            <Form.Label>Есімі</Form.Label>
             <Form.Control
               type="text"
               name="name"
@@ -86,7 +86,7 @@ const AdminEditUser = ({ match, history }) => {
             />
           </Form.Group>
           <Button variant="primary" type="submit" className="mx-1">
-            Edit
+            Өзгерту
           </Button>
         </Form>
       )}

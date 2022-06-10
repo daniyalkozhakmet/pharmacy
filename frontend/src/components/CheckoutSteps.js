@@ -7,52 +7,52 @@ const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
       {step1 ? (
         <Nav.Item>
           <LinkContainer to="/login">
-            <Nav.Link>Login</Nav.Link>
+            <Nav.Link>Кіру</Nav.Link>
           </LinkContainer>
         </Nav.Item>
       ) : (
         <Nav.Item>
           <LinkContainer to="/login">
-            <Nav.Link disabled>Login</Nav.Link>
+            <Nav.Link disabled>Кіру</Nav.Link>
           </LinkContainer>
         </Nav.Item>
       )}
       {step2 ? (
         <Nav.Item>
           <LinkContainer to="/shipping">
-            <Nav.Link>Shipping</Nav.Link>
+            <Nav.Link>Жеткізу мәліметі</Nav.Link>
           </LinkContainer>
         </Nav.Item>
       ) : (
         <Nav.Item>
           <LinkContainer to="/shipping">
-            <Nav.Link disabled>Shipping</Nav.Link>
+            <Nav.Link disabled>Жеткізу мәліметі</Nav.Link>
           </LinkContainer>
         </Nav.Item>
       )}
       {step3 ? (
         <Nav.Item>
           <LinkContainer to="/payment">
-            <Nav.Link>Payment</Nav.Link>
+            <Nav.Link>Төлем</Nav.Link>
           </LinkContainer>
         </Nav.Item>
       ) : (
         <Nav.Item>
           <LinkContainer to="/payment">
-            <Nav.Link disabled>Payment</Nav.Link>
+            <Nav.Link disabled>Төлем</Nav.Link>
           </LinkContainer>
         </Nav.Item>
       )}
       {step4 ? (
         <Nav.Item>
           <LinkContainer to="/placeorder">
-            <Nav.Link>Place Order</Nav.Link>
+            <Nav.Link>Тапсырыс орналастыру</Nav.Link>
           </LinkContainer>
         </Nav.Item>
       ) : (
         <Nav.Item>
           <LinkContainer to="/placeorder">
-            <Nav.Link disabled>Place Order</Nav.Link>
+            <Nav.Link disabled>Тапсырыс орналастыру</Nav.Link>
           </LinkContainer>
         </Nav.Item>
       )}

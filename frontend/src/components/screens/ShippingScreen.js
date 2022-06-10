@@ -29,26 +29,26 @@ const ShippingScreen = ({history}) => {
     return (<>
         <CheckoutSteps step1 step2/>
         <FormContainer>
-            <h1>Shipping</h1>
+            <h1>Жеткізу мәліметі</h1>
             <Form onSubmit={submitHandler}>
             <Form.Group className="mb-3">
-                <Form.Label>Enter Address</Form.Label>
-                <Form.Control type="text" placeholder="Adress..." value={address} onChange={e=>onChange(e)} name='address'/>
+                <Form.Label>Адрес</Form.Label>
+                <Form.Control type="text" placeholder="Адрес..." value={address} onChange={e=>onChange(e)} name='address'/>
             </Form.Group>
             <Form.Group className="mb-3">
-                <Form.Label>Enter City</Form.Label>
-                <Form.Control type="text" placeholder="City..." value={city} onChange={e=>onChange(e)} name='city'/>
+                <Form.Label>Қала</Form.Label>
+                <Form.Control type="text" placeholder="Қала..." value={city} onChange={e=>onChange(e)} name='city'/>
             </Form.Group>
             <Form.Group className="mb-3">
-                <Form.Label>Enter PostalCode</Form.Label>
-                <Form.Control type="text" placeholder="PostalCode..." value={postalCode} onChange={e=>onChange(e)} name='postalCode'/>
+                <Form.Label>Пошта индексі</Form.Label>
+                <Form.Control type="text" placeholder="Пошта индексі..." value={postalCode} onChange={e=>onChange(e)} name='postalCode'/>
             </Form.Group>
             <Form.Group className="mb-3">
-                <Form.Label>Enter Country</Form.Label>
-                <Form.Control type="text" placeholder="Country..." value={country} onChange={e=>onChange(e)} name='country'/>
+                <Form.Label>Ел</Form.Label>
+                <Form.Control type="text" placeholder="Ел..." value={country} onChange={e=>onChange(e)} name='country'/>
             </Form.Group>
             <Button type='submit' className='btn-primary py-3'>
-                Continue
+                Жалғастыру
             </Button>
             </Form>
         </FormContainer>

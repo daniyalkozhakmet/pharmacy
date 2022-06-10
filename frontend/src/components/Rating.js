@@ -56,7 +56,7 @@ const Rating = ({ rating, numReviews }) => {
       ></i>
       {numReviews && (
         <p style={{ marginLeft: "5px", display: "inline-block" }}>
-          {numReviews} reviews
+          {numReviews} бағалау
         </p>
       )}
     </div>

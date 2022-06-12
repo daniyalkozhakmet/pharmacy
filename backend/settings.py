@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^l@#t##zy6hlk+%@2=$ak38iront7=^m4$c6)4lx0q6q1nqqnx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','localhost','pharmafy.herokuapp.com']
 
@@ -190,4 +190,4 @@ AWS_SECRET_ACCESS_KEY='JeQaxZMthtbtKp38J4e5H14IvTRI2bvESy4+MhTf'
 AWS_STORAGE_BUCKET_NAME='pharmafy'
 AWS_QUERYSTRING_AUTH=False
 if os.getcwd() == '/app':
-    DEBUG=False
+    DEBUG=True

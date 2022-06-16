@@ -81,14 +81,14 @@ def getOrderById(request,pk):
 @permission_classes([IsAuthenticated])
 def updatePaid(request,pk):
     user=User.objects.get(email=request.user)
-    my_email=settings.EMAIL_HOST_USER
-    password=settings.EMAIL_HOST_PASSWORD
-    subject='Thank you for Purchase'
-    message='Your order will be delivered as soon as possible.You can track your order by 4275233253'
-    with smtplib.SMTP('smtp.gmail.com') as connection:
-        connection.starttls()
-        connection.login(user=my_email,password=password)
-        connection.sendmail(from_addr=my_email,to_addrs=user.email,msg=f'Subject:{subject}\n\n{message}')
+    # my_email=settings.EMAIL_HOST_USER
+    # password=settings.EMAIL_HOST_PASSWORD
+    # subject='Thank you for Purchase'
+    # message='Your order will be delivered as soon as possible.You can track your order by 4275233253'
+    # with smtplib.SMTP('smtp.gmail.com') as connection:
+    #     connection.starttls()
+    #     connection.login(user=my_email,password=password)
+    #     connection.sendmail(from_addr=my_email,to_addrs=user.email,msg=f'Subject:{subject}\n\n{message}')
     order=Order.objects.get(_id=pk)
     order.isPaid=True
     order.paidAt=datetime.now()
